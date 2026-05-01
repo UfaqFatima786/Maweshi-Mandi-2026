@@ -106,12 +106,85 @@ body {
     cursor: pointer;
 }
 
+
+.contact-para {
+    padding-top: 200px;
+}
+
+.form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #421c1c, #3e243c);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgb(248, 161, 237);
+    font-family: Arial, sans-serif;
+    border: 2px solid #ff71e0;
+}
+
+.form:hover {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #521d4f;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgb(245, 161, 248);
+    font-family: Arial, sans-serif;
+    border: 2px solid #ff71ff;
+    cursor: pointer;
+}
+
+.label,
+.label-msg {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.form input[type="text"],
+.form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form input[type="text"]:hover,
+.form textarea:hover {
+    border-color: #1a015f;
+}
+
+.form input[type="text"]:focus,
+.form textarea:focus {
+    border-color: #012c0b;
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.btn {
+    background-color: #f1b9f8;
+}
+
+.btn:hover {
+    background-color: #400142;
+    color: #ffffff;
+    border: 2px solid #052401;
+}
+
+.btn:active {
+    background-color: #6b0080;
+    transform: scale(0.98);
+}
+
 .footer {
     background-color: #310120;
 }
 
 .footer-row {
-    background-color: #421c35;
+    background-color: #3b092a;
     border-radius: 10px;
     border: #fa00c4 solid 2px;
 
@@ -135,4 +208,10 @@ body {
 .text-white {
     color: white;
     text-decoration: none;
+}
+.cow-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
