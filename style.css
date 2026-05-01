@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
 
     background: linear-gradient(135deg, #000000, #421c1c, #3e243c);
@@ -11,9 +12,11 @@ body {
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
 }
-.navbar{
+
+.navbar {
     background-color: #421c35;
 }
+
 .nav-link {
     color: white;
     transition: 0.3s ease;
@@ -25,11 +28,13 @@ body {
     transform: scale(1.05);
     font-size: 20px;
 }
+
 .logo-1 {
     width: 70px;
     height: 70px;
     border-radius: 50%;
 }
+
 .img-fluid {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -37,6 +42,7 @@ body {
     width: 550px;
     border-radius: 50%;
 }
+
 .img-fluid:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     transform: scale(1.05);
@@ -46,24 +52,28 @@ body {
     animation-name: __flash;
     animation: slideFade 0.5s ease forwards;
 }
-.hero-section{
+
+.hero-section {
     background: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 15px;
 }
-.hero-section:hover{
+
+.hero-section:hover {
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
     cursor: pointer;
 }
-.heading3{
+
+.heading3 {
     font-size: 48px;
     font-weight: 700;
     color: #fa00c4;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-style: italic;
 }
-.heading3:hover{
+
+.heading3:hover {
     font-size: 55px;
     font-weight: 700;
     color: #000000;
@@ -75,29 +85,45 @@ body {
     animation: slideFade 0.5s ease forwards;
 
 }
-.para-livestock{
+
+.para-livestock {
     font-size: 18px;
     font-style: italic;
     line-height: 1.6;
     color: #ffffff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-.about-section{
+
+.about-section {
     background: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 15px;
 }
-.about-section:hover{
+
+.about-section:hover {
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
     cursor: pointer;
 }
-.footer{
+
+.footer {
     background-color: #310120;
 }
-.footer-row{
-        background-color: #421c35;
-        border-radius: 10px;
-        border: #fa00c4 solid 2px;
 
+.footer-row {
+    background-color: #421c35;
+    border-radius: 10px;
+    border: #fa00c4 solid 2px;
+
+}
+
+.imgs {
+    width: 35px;
+    height: 30px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+.text-white {
+    color: white;
+    text-decoration: none;
 }
