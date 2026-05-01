@@ -116,6 +116,14 @@ body {
     border: #fa00c4 solid 2px;
 
 }
+.para-livestock a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.para-e a {
+    text-decoration: none;
+    color: #ffffff;
+}
 
 .imgs {
     width: 35px;
@@ -123,6 +131,7 @@ body {
     border-radius: 50px;
     text-decoration: none;
 }
+
 .text-white {
     color: white;
     text-decoration: none;
