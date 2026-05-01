@@ -11,7 +11,9 @@ body {
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
 }
-
+.navbar{
+    background-color: #421c35;
+}
 .nav-link {
     color: white;
     transition: 0.3s ease;
@@ -89,4 +91,13 @@ body {
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
     cursor: pointer;
+}
+.footer{
+    background-color: #310120;
+}
+.footer-row{
+        background-color: #421c35;
+        border-radius: 10px;
+        border: #fa00c4 solid 2px;
+
 }
