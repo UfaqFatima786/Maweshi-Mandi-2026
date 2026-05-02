@@ -41,7 +41,7 @@ var normalCows = [
 var heavyCows = [
     new cows("black white cow", "300,000 PKR", "https://images.olx.com.pk/thumbnails/609333648-800x600.webp"),
 new cows("black spots cow", "500,000 PKR", "https://images.olx.com.pk/thumbnails/609333637-800x600.webp"),
-// new cows("brown cow", "600,000 PKR", "https://images.olx.com.pk/thumbnails/614194730-800x600.webp"),
+new cows("brown cow", "600,000 PKR", "https://images.olx.com.pk/thumbnails/614194730-800x600.webp"),
 ];
 
 cows.prototype.renderCard = function () {
