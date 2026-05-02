@@ -49,7 +49,7 @@ cows.prototype.renderCard = function () {
 
      <div class="col">
     <div class="card h-100">
-      <img src="${this.src}" class="card-img-top cows-img" alt="...">
+      <img src="${this.src}" class="cows-img" alt="...">
       <div class="card-body">
         <h5 class="card-title">${this.name.toUpperCase()}</h5>
       </div>
