@@ -3,14 +3,14 @@ function cows(a, b, c) {
     this.price = b;
     this.src = c;
 }
-var warmDishes = [
+var mix = [
     new cows("White Cow", "150,000 PKR", "https://www.bakraonline.pk/images/ads/2020-07/bull/110_1_75295.jpg"),
     new cows("Black Cow", "125,000 PKR", "https://www.bakraonline.pk/images/ads/2020-07/bull/110_1_57225.jpg"),
     new cows("White Brown Cow", "330,000 PKR", "https://images.olx.com.pk/thumbnails/610427666-800x600.webp"),
     new cows("Red Cow", "400,000 PKR", "https://images.olx.com.pk/thumbnails/610300699-800x600.webp"),
 ];
 
-var dinnerset = [
+var goldCategory = [
     new cows("White Bachra", "225,000 PKR", "https://images.olx.com.pk/thumbnails/610427665-800x600.webp"),
     new cows("Black Bachra", "150,000 PKR", "https://images.olx.com.pk/thumbnails/610427667-800x600.webp"),
     new cows("White Cow", "250,000 PKR","https://images.olx.com.pk/thumbnails/610809959-800x600.webp"),
@@ -65,10 +65,10 @@ cows.prototype.renderCard = function () {
           `
 };
 var ourItems = document.getElementById("ourcows");
-for (var item of warmDishes) {
+for (var item of mix) {
     ourItems.innerHTML += item.renderCard();
 }
-for (var item of dinnerset) {
+for (var item of goldCategory) {
     ourItems.innerHTML += item.renderCard();
 }
 for (var item of glasssets) {
