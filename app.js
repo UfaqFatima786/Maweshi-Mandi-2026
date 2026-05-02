@@ -5,16 +5,16 @@ function cows(a, b, c) {
 }
 var warmDishes = [
     new cows("White Cow", "150,000 PKR", "https://www.bakraonline.pk/images/ads/2020-07/bull/110_1_75295.jpg"),
-    new cows("Food Warmer with Glass Dish", "30000 PKR", "https://www.bakraonline.pk/images/ads/2020-07/bull/110_1_57225.jpg"),
-    new cows("Elegant Buffet Chafting Dish", "35000 PKR", "https://images.olx.com.pk/thumbnails/610427666-800x600.webp"),
-    new cows("New White and Golden Food Warmer Dishes", "40000 PKR", "https://images.olx.com.pk/thumbnails/610300699-800x600.webp"),
+    new cows("Black Cow", "125,000 PKR", "https://www.bakraonline.pk/images/ads/2020-07/bull/110_1_57225.jpg"),
+    new cows("White Brown Cow", "330,000 PKR", "https://images.olx.com.pk/thumbnails/610427666-800x600.webp"),
+    new cows("Red Cow", "400,000 PKR", "https://images.olx.com.pk/thumbnails/610300699-800x600.webp"),
 ];
 
 var dinnerset = [
-    new cows("Winsor England Heritage Black Porcelain Dinner Set", "125000 PKR", "https://images.olx.com.pk/thumbnails/610427665-800x600.webp"),
-    new cows("Winsor England Heritage Black Porcelain Dinner Set", "125000 PKR", "https://images.olx.com.pk/thumbnails/610427667-800x600.webp"),
-    new cows("Winsor England Venice White Porcelain Dinner Set", "200000 PKR","https://images.olx.com.pk/thumbnails/610809959-800x600.webp"),
-    new cows("24PCS Ceramic Breakfast Dinner Set", "27,950 PKR", "https://images.olx.com.pk/thumbnails/610809958-800x600.webp"),
+    new cows("White Bachra", "225,000 PKR", "https://images.olx.com.pk/thumbnails/610427665-800x600.webp"),
+    new cows("Black Bachra", "150,000 PKR", "https://images.olx.com.pk/thumbnails/610427667-800x600.webp"),
+    new cows("White Cow", "250,000 PKR","https://images.olx.com.pk/thumbnails/610809959-800x600.webp"),
+    new cows("Whitish Cow", "300,000 PKR", "https://images.olx.com.pk/thumbnails/610809958-800x600.webp"),
 
 ];
 var glasssets = [
