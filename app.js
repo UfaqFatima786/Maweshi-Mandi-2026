@@ -17,31 +17,31 @@ var goldCategory = [
     new cows("Whitish Cow", "300,000 PKR", "https://images.olx.com.pk/thumbnails/610809958-800x600.webp"),
 
 ];
-var glasssets = [
-    new cows("6PCS Crystal Lining Glass Set", "2,950 PKR", "https://images.olx.com.pk/thumbnails/610809962-800x600.webp"),
-    new cows("Crystal lining glass set of 6PCS", "2,500 PKR", "https://images.olx.com.pk/thumbnails/613704847-800x600.webp"),
-    new cows("Ceramic Printed Cup-Saucer Set", "15,000 PKR", "https://images.olx.com.pk/thumbnails/610809966-800x600.webp"),
-    new cows("Ceramic Printed Cup-Saucer Set", "15,000 PKR", "https://images.olx.com.pk/thumbnails/613704844-800x600.webp"),
+var silverQuality = [
+    new cows("Black cow", "150,000 PKR", "https://images.olx.com.pk/thumbnails/610809962-800x600.webp"),
+    new cows("Whitis cow", "225,000 PKR", "https://images.olx.com.pk/thumbnails/613704847-800x600.webp"),
+    new cows("full white cow", "300,000 PKR", "https://images.olx.com.pk/thumbnails/610809966-800x600.webp"),
+    new cows("full black cow", "150,000 PKR", "https://images.olx.com.pk/thumbnails/613704844-800x600.webp"),
 ];
-var bowls = [
-    new cows(" Small Black Lotus Bowls", "5000 PKR", "https://images.olx.com.pk/thumbnails/614194730-800x600.webp"),
-    new cows("Melamine 3 Black Medium Platter", "7000 PKR", "https://images.olx.com.pk/thumbnails/610288784-800x600.webp"),
-    new cows("Ceramic 3 Black Medium Platter", "20000 PKR", "https://images.olx.com.pk/thumbnails/610331058-800x600.webp"),
+var achiQuality = [
+    new cows(" full brown cow", "300,000 PKR", "https://images.olx.com.pk/thumbnails/614194730-800x600.webp"),
+    new cows("whitish cow", "200,000 PKR", "https://images.olx.com.pk/thumbnails/610288784-800x600.webp"),
+    new cows("brown spots cow", "300,000 PKR", "https://images.olx.com.pk/thumbnails/610331058-800x600.webp"),
 ];
-var tray = [
-    new cows("Melamine Black Serving Tray", "5000 PKR", "https://images.olx.com.pk/thumbnails/610809960-800x600.webp"),
-    new cows("Melamine White Medium Bowl", "7000 PKR", "https://images.olx.com.pk/thumbnails/613442117-800x600.webp"),
-    new cows("Melamine Black Serving Platter", "6000 PKR", "https://images.olx.com.pk/thumbnails/610809963-800x600.webp"),
+var achiCows = [
+    new cows("full white cow", "500,000PKR", "https://images.olx.com.pk/thumbnails/610809960-800x600.webp"),
+    new cows("blackish cow", "150,000 PKR", "https://images.olx.com.pk/thumbnails/613442117-800x600.webp"),
+    new cows("white black cow", "500,000 PKR", "https://images.olx.com.pk/thumbnails/610809963-800x600.webp"),
 ];
-var spoon = [
-    new cows("white Soup Spoon", "200 PKR", "https://images.olx.com.pk/thumbnails/612867201-800x600.webp"),
-    new cows("Vlack curry Serving Spoon", "200 PKR", "https://images.olx.com.pk/thumbnails/609333637-800x600.webp"),
-    new cows("black spoon", "199 PKR", "https://images.olx.com.pk/thumbnails/609333638-800x600.webp"),
+var normalCows = [
+    new cows("white black cow", "200,000 PKR", "https://images.olx.com.pk/thumbnails/612867201-800x600.webp"),
+    new cows("black spots cow", "175,000 PKR", "https://images.olx.com.pk/thumbnails/609333637-800x600.webp"),
+    new cows("full white cow", "200,000 PKR", "https://images.olx.com.pk/thumbnails/609333638-800x600.webp"),
 ];
-var plate = [
-    new cows("white Soup Spoon", "300000 PKR", "https://images.olx.com.pk/thumbnails/609333648-800x600.webp"),
-new cows("melamine white plate", "900 PKR", "https://images.olx.com.pk/thumbnails/609333637-800x600.webp"),
-new cows("melamine black medium plate", "700 PKR", "https://images.olx.com.pk/thumbnails/614194730-800x600.webp"),
+var heavyCows = [
+    new cows("black white cow", "300,000 PKR", "https://images.olx.com.pk/thumbnails/609333648-800x600.webp"),
+new cows("black spots cow", "500,000 PKR", "https://images.olx.com.pk/thumbnails/609333637-800x600.webp"),
+new cows("brown cow", "600,000 PKR", "https://images.olx.com.pk/thumbnails/614194730-800x600.webp"),
 ];
 
 cows.prototype.renderCard = function () {
@@ -71,18 +71,18 @@ for (var item of mix) {
 for (var item of goldCategory) {
     ourItems.innerHTML += item.renderCard();
 }
-for (var item of glasssets) {
+for (var item of silverQuality) {
     ourItems.innerHTML += item.renderCard();
 }
-for (var item of bowls) {
+for (var item of achiQuality) {
     ourItems.innerHTML += item.renderCard();
 }
-for (var item of tray) {
+for (var item of achiCows) {
     ourItems.innerHTML += item.renderCard();
 }
-for (var item of spoon) {
+for (var item of normalCows) {
     ourItems.innerHTML += item.renderCard();
 }
-for (var item of plate) {
+for (var item of heavyCows) {
     ourItems.innerHTML += item.renderCard();
 }
