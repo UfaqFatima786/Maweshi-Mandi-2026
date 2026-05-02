@@ -41,7 +41,7 @@ var normalCows = [
 var heavyCows = [
     new cows("black white cow", "300,000 PKR", "https://images.olx.com.pk/thumbnails/609333648-800x600.webp"),
 new cows("black spots cow", "500,000 PKR", "https://images.olx.com.pk/thumbnails/609333637-800x600.webp"),
-new cows("brown cow", "600,000 PKR", "https://images.olx.com.pk/thumbnails/614194730-800x600.webp"),
+// new cows("brown cow", "600,000 PKR", "https://images.olx.com.pk/thumbnails/614194730-800x600.webp"),
 ];
 
 cows.prototype.renderCard = function () {
@@ -85,4 +85,91 @@ for (var item of normalCows) {
 }
 for (var item of heavyCows) {
     ourItems.innerHTML += item.renderCard();
+}
+
+var cart = [];
+
+function addToCart(product) {
+    cart.push(product);
+    showCart();
+}
+
+function showCart() {
+
+    var cartItems = document.getElementById("cartItems");
+
+    cartItems.innerHTML = "";
+
+    for (var item of cart) {
+
+        cartItems.innerHTML += `
+        <div class="d-flex align-items-center gap-2 border p-2 mb-2">
+
+        <img src="${item.src}" width="50">
+
+        <div>
+        <div>${item.name}</div>
+        <div>${item.price}</div>
+        </div>
+
+        </div>
+        `;
+    }
+}
+
+
+
+function addToCart(product) {
+
+    cart.push(product);
+
+    // hide carousel if exists
+    var carousel = document.getElementById("carouselExampleSlidesOnly");
+    if (carousel) {
+        carousel.style.display = "none";
+    }
+
+    // hide product grid
+    var productsSection = document.getElementById("ouritems");
+    if (productsSection) {
+        productsSection.style.display = "none";
+    }
+
+    // show success card screen
+    var mainContent = document.querySelector(".container") || document.body;
+
+    mainContent.innerHTML = `
+    
+        <h1 class="text-center productname mt-4">
+        Product Added Successfully!
+        </h1>
+        <div class="card mt-4 p-4 shadow-lg mx-auto"
+        style="max-width: 500px;
+        border-radius: 15px;
+        background: #ffbcbc;">
+
+            <img src="${product.src}"
+            class="card-img-top mx-auto"
+            style="max-width: 350px;
+            border-radius: 10px;">
+
+            <div class="card-body text-center">
+
+                <h3 class="card-title fw-bold mt-2">
+                ${product.name.toUpperCase()}
+                </h3>
+
+                <div class="mt-3">
+                    <h4 class="text-success fw-bold m-0 p-3"
+                    style="background: #e8f5e9;
+                    border-radius: 10px;">
+                    Price: ${product.price}
+                    </h4>
+                </div>
+                <button onclick="location.reload()" class="btn btn-warning btn-lg mt-4 w-100 fw-bold"> Continue Shopping </button>
+
+            </div>
+
+        </div>
+    `;
 }
