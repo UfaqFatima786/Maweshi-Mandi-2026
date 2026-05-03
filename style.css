@@ -233,6 +233,12 @@ body {
     justify-content: center;
     gap: 40px;
 }
+#ourgoats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
 .col{
     width: 400px;
     overflow: hidden;
