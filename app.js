@@ -13,7 +13,7 @@ var mix = [
 var goldCategory = [
     new cows("White Bachra", "225,000 PKR", "https://images.olx.com.pk/thumbnails/610427665-800x600.webp"),
     new cows("Black Bachra", "150,000 PKR", "https://images.olx.com.pk/thumbnails/610427667-800x600.webp"),
-    new cows("White Cow", "250,000 PKR","https://images.olx.com.pk/thumbnails/610809959-800x600.webp"),
+    new cows("White Cow", "250,000 PKR", "https://images.olx.com.pk/thumbnails/610809959-800x600.webp"),
     new cows("Whitish Cow", "300,000 PKR", "https://images.olx.com.pk/thumbnails/610809958-800x600.webp"),
 
 ];
@@ -40,15 +40,15 @@ var normalCows = [
 ];
 var heavyCows = [
     new cows("black white cow", "300,000 PKR", "https://images.olx.com.pk/thumbnails/609333648-800x600.webp"),
-new cows("black spots cow", "500,000 PKR", "https://images.olx.com.pk/thumbnails/609333637-800x600.webp"),
-new cows("brown cow", "600,000 PKR", "https://images.olx.com.pk/thumbnails/614194730-800x600.webp"),
+    new cows("black spots cow", "500,000 PKR", "https://images.olx.com.pk/thumbnails/609333637-800x600.webp"),
+    new cows("brown cow", "600,000 PKR", "https://images.olx.com.pk/thumbnails/614194730-800x600.webp"),
 ];
 
 cows.prototype.renderCard = function () {
     return `
 
      <div class="col">
-    <div class="card h-100">
+        <div class="card h-100">
       <img src="${this.src}" class="cows-img" alt="...">
       <div class="card-body">
         <h5 class="card-title">${this.name.toUpperCase()}</h5>
@@ -60,8 +60,8 @@ cows.prototype.renderCard = function () {
         Add to Cart
         </button>
       </div>
+          </div>
     </div>
-  </div>
           `
 };
 var ourItems = document.getElementById("ourcows");

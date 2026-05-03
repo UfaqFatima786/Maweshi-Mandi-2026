@@ -227,6 +227,11 @@ body {
     height: 300px;
     display: block;
 }
+.col{
+    width: 400px;
+    overflow: hidden;
+    margin: auto;
+}
 .card-title{
     background-color: #421c1c;
     color: #ffffff;
@@ -240,3 +245,4 @@ body {
 .text-body{
     color: #ffffff;
 }
+
