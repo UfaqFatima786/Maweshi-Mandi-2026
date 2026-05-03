@@ -227,10 +227,22 @@ body {
     height: 300px;
     display: block;
 }
+#ourcows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
 .col{
     width: 400px;
     overflow: hidden;
     margin: auto;
+  gap: 20px;   /* 👈 yeh magic line hai */
+}
+.col:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+    cursor: pointer;
 }
 .card-title{
     background-color: #421c1c;
