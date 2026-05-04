@@ -55,7 +55,7 @@ cows.prototype.renderCard = function () {
       </div>
       <div class="card-footer">
         <small class="price">Price:${this.price}</small>
-          <button onclick='addToCart(${JSON.stringify(this)})'
+          <button onclick='addToCart(${JSON.stringify(this)}, this)'
         class="bg-black text-white px-2 py-2 rounded border-0">
         Add to Cart
         </button>
@@ -87,12 +87,9 @@ for (var item of heavyCows) {
     ourItems.innerHTML += item.renderCard();
 }
 
-var cart = [];
 
-// function addToCart(product) {
-//     cart.push(product);
-//     showCart();
-// }
+
+var cart = [];
 
 function showCart() {
 
@@ -116,24 +113,105 @@ function showCart() {
         `;
     }
 }
-function addToCart(product) {
 
+
+
+function addToCart(product, button) {
     cart.push(product);
-
-    // hide products
-    var productsSection = document.getElementById("ourcows");
-    if (productsSection) {
-        productsSection.style.display = "none";
-    }
-
-    // show cart section
-    var cartSection = document.getElementById("cartSection");
-    if (cartSection) {
-        cartSection.style.display = "block";
-    }
-
     showCart();
+
+    var allCards = document.querySelectorAll("#ourcows .col");
+    allCards.forEach(function (card) {
+        if (button && card.contains(button)) {
+            card.style.display = "";
+            card.classList.add("selected-product-card");
+        } else {
+            card.style.display = "none";
+            card.classList.remove("selected-product-card");
+        }
+    });
+
+    var successSection = document.getElementById("productSuccess");
+    if (!successSection) {
+        successSection = document.createElement("div");
+        successSection.id = "productSuccess";
+        document.querySelector(".container").insertBefore(successSection, document.getElementById("ourcows"));
+    }
+
+    successSection.innerHTML = `
+        <div class="product-added-wrapper text-center mb-4">
+            <h2 class="product-added-title">Product Added Successfully!</h2>
+            <div class="card product-added-card mx-auto">
+                <img src="${product.src}" class="card-img-top product-added-img" alt="${product.name}">
+                <div class="card-body">
+    //                 <h4 class="card-title product-added-name">${product.name.toUpperCase()}</h4>
+    //                 <div class="product-added-price">Price: ${product.price}</div>
+    //                 <button onclick="location.reload()" class="btn btn-warning btn-lg w-100 mt-3">Continue Shopping</button>
+    //             </div>
+    //         </div>
+    //     </div>
+    // `;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var cart = [];
+
+// // function addToCart(product) {
+// //     cart.push(product);
+// //     showCart();
+// // }
+
+// function showCart() {
+
+//     var cartItems = document.getElementById("cartItems");
+
+//     cartItems.innerHTML = "";
+
+//     for (var item of cart) {
+
+//         cartItems.innerHTML += `
+//         <div class="d-flex align-items-center gap-2 border p-2 mb-2">
+
+//         <img src="${item.src}" width="50">
+
+//         <div>
+//         <div>${item.name}</div>
+//         <div>${item.price}</div>
+//         </div>
+
+//         </div>
+//         `;
+//     }
+// }
+// function addToCart(product) {
+
+//     cart.push(product);
+
+//     // hide products
+//     var productsSection = document.getElementById("productsSection");
+//     if (productsSection) {
+//         productsSection.style.display = "none";
+//     }
+
+//     // show cart section
+//     var cartSection = document.getElementById("cartSection");
+//     if (cartSection) {
+//         cartSection.style.display = "block";
+//     }
+
+//     showCart();
+// }
 
 
 // function addToCart(product) {
