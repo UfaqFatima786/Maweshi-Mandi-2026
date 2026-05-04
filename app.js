@@ -91,6 +91,13 @@ for (var item of heavyCows) {
 
 var cart = [];
 
+function addToCart(product) {
+
+    cart.push(product);
+
+    showCart();
+}
+
 function showCart() {
 
     var cartItems = document.getElementById("cartItems");
@@ -115,156 +122,57 @@ function showCart() {
 }
 
 
+function addToCart(product) {
 
-function addToCart(product, button) {
     cart.push(product);
-    showCart();
 
-    var allCards = document.querySelectorAll("#ourcows .col");
-    allCards.forEach(function (card) {
-        if (button && card.contains(button)) {
-            card.style.display = "";
-            card.classList.add("selected-product-card");
-        } else {
-            card.style.display = "none";
-            card.classList.remove("selected-product-card");
-        }
-    });
-
-    var successSection = document.getElementById("productSuccess");
-    if (!successSection) {
-        successSection = document.createElement("div");
-        successSection.id = "productSuccess";
-        document.querySelector(".container").insertBefore(successSection, document.getElementById("ourcows"));
+    // hide carousel if exists
+    var carousel = document.getElementById("carouselExampleSlidesOnly");
+    if (carousel) {
+        carousel.style.display = "none";
     }
 
-    successSection.innerHTML = `
-        <div class="product-added-wrapper text-center mb-4">
-            <h2 class="product-added-title">Product Added Successfully!</h2>
-            <div class="card product-added-card mx-auto">
-                <img src="${product.src}" class="card-img-top product-added-img" alt="${product.name}">
-                <div class="card-body">
-    //                 <h4 class="card-title product-added-name">${product.name.toUpperCase()}</h4>
-    //                 <div class="product-added-price">Price: ${product.price}</div>
-    //                 <button onclick="location.reload()" class="btn btn-warning btn-lg w-100 mt-3">Continue Shopping</button>
-    //             </div>
-    //         </div>
-    //     </div>
-    // `;
-}
+    // hide product grid
+    var productsSection = document.getElementById("ourcows");
+    if (productsSection) {
+        productsSection.style.display = "none";
+    }
 
+    // show success card screen
+    var mainContent = document.querySelector(".container") || document.body;
 
-
-
-
-
-
-
-
-
-
-
-
-// var cart = [];
-
-// // function addToCart(product) {
-// //     cart.push(product);
-// //     showCart();
-// // }
-
-// function showCart() {
-
-//     var cartItems = document.getElementById("cartItems");
-
-//     cartItems.innerHTML = "";
-
-//     for (var item of cart) {
-
-//         cartItems.innerHTML += `
-//         <div class="d-flex align-items-center gap-2 border p-2 mb-2">
-
-//         <img src="${item.src}" width="50">
-
-//         <div>
-//         <div>${item.name}</div>
-//         <div>${item.price}</div>
-//         </div>
-
-//         </div>
-//         `;
-//     }
-// }
-// function addToCart(product) {
-
-//     cart.push(product);
-
-//     // hide products
-//     var productsSection = document.getElementById("productsSection");
-//     if (productsSection) {
-//         productsSection.style.display = "none";
-//     }
-
-//     // show cart section
-//     var cartSection = document.getElementById("cartSection");
-//     if (cartSection) {
-//         cartSection.style.display = "block";
-//     }
-
-//     showCart();
-// }
-
-
-// function addToCart(product) {
-
-//     cart.push(product);
-
-//     // hide carousel if exists
-//     var carousel = document.getElementById("carouselExampleSlidesOnly");
-//     if (carousel) {
-//         carousel.style.display = "none";
-//     }
-
-//     // hide product grid
-//     var productsSection = document.getElementById("ouritems");
-//     if (productsSection) {
-//         productsSection.style.display = "none";
-//     }
-
-//     // show success card screen
-//     var mainContent = document.querySelector(".container") || document.body;
-
-//     mainContent.innerHTML = `
+    mainContent.innerHTML = `
     
-//         <h1 class="text-center productname mt-4">
-//         Product Added Successfully!
-//         </h1>
-//         <div class="card mt-4 p-4 shadow-lg mx-auto"
-//         style="max-width: 500px;
-//         border-radius: 15px;
-//         background: #ffbcbc;">
+        <h1 class="text-center productname mt-4">
+        Product Added Successfully!
+        </h1>
+        <div class="card mt-4 p-4 shadow-lg mx-auto"
+        style="max-width: 500px;
+        border-radius: 15px;
+        background: #ffbcbc;">
 
-//             <img src="${product.src}"
-//             class="card-img-top mx-auto"
-//             style="max-width: 350px;
-//             border-radius: 10px;">
+            <img src="${product.src}"
+            class="card-img-top mx-auto"
+            style="max-width: 350px;
+            border-radius: 10px;">
 
-//             <div class="card-body text-center">
+            <div class="card-body text-center">
 
-//                 <h3 class="card-title fw-bold mt-2">
-//                 ${product.name.toUpperCase()}
-//                 </h3>
+                <h3 class="card-title fw-bold mt-2">
+                ${product.name.toUpperCase()}
+                </h3>
 
-//                 <div class="mt-3">
-//                     <h4 class="text-success fw-bold m-0 p-3"
-//                     style="background: #e8f5e9;
-//                     border-radius: 10px;">
-//                     Price: ${product.price}
-//                     </h4>
-//                 </div>
-//                 <button onclick="location.reload()" class="btn btn-warning btn-lg mt-4 w-100 fw-bold"> Continue Shopping </button>
+                <div class="mt-3">
+                    <h4 class="text-success fw-bold m-0 p-3"
+                    style="background: #e8f5e9;
+                    border-radius: 10px;">
+                    Price: ${product.price}
+                    </h4>
+                </div>
+                <button onclick="location.reload()" class="btn btn-warning btn-lg mt-4 w-100 fw-bold"> Continue Shopping </button>
 
-//             </div>
+            </div>
 
-//         </div>
-//     `;
-// }
+        </div>
+    `;
+}

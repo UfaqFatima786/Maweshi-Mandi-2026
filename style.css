@@ -189,10 +189,12 @@ body {
     border: #fa00c4 solid 2px;
 
 }
+
 .para-livestock a {
     text-decoration: none;
     color: #ffffff;
 }
+
 .para-e a {
     text-decoration: none;
     color: #ffffff;
@@ -215,13 +217,6 @@ body {
     border: none;
     border-radius: 20px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
-.product-added-img {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    object-fit: cover;
-    height: 260px;
 }
 
 .product-added-name {
@@ -252,8 +247,15 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .price {
@@ -271,6 +273,7 @@ body {
     color: white;
     text-decoration: none;
 }
+
 .cow-img {
     width: 100%;
     height: auto;
@@ -285,40 +288,48 @@ body {
     height: 300px;
     display: block;
 }
+
 #ourcows {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
 }
+
 #ourgoats {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
 }
-.col{
+
+.col {
     width: 400px;
     overflow: hidden;
     margin: auto;
-  gap: 20px;   /* 👈 yeh magic line hai */
+    gap: 20px;
+    /* 👈 yeh magic line hai */
 }
+
 .col:hover {
     transform: scale(1.05);
     transition: 0.5s;
     cursor: pointer;
 }
-.card-title{
+
+.card-title {
     background-color: #421c1c;
-    color: #ffffff;
-}
-.card-body{
-    background-color: #421c1c;
-}
-.card-footer{
-    background-color: #421c1c;
-}
-.text-body{
     color: #ffffff;
 }
 
+.card-body {
+    background-color: #421c1c;
+}
+
+.card-footer {
+    background-color: #421c1c;
+}
+
+.text-body {
+    color: #ffffff;
+}
