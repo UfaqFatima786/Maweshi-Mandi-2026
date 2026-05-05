@@ -123,6 +123,7 @@ function showCart() {
 
 
 
+
 function addToCart(product) {
 
     cart.push(product);
@@ -134,7 +135,7 @@ function addToCart(product) {
     }
 
     // hide product grid
-    var productsSection = document.getElementById("ouritems");
+    var productsSection = document.getElementById("ourgoats");
     if (productsSection) {
         productsSection.style.display = "none";
     }
